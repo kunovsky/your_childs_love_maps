@@ -1,0 +1,29 @@
+<div ng-controller="IndexController">
+
+  <super-navbar>
+    <super-navbar-title>
+      Questions
+    </super-navbar-title>
+  </super-navbar>
+
+  
+  <div class="questions-container">
+    <div class="current-count"> {{current}} of {{totalQuestions}} </div>
+    <div class="padding question-content"> {{currentQuestion()}} </div>
+
+      <div class="navigation-buttons">
+
+        <div class="row">
+          <div class="col navigation-button" ng-click="previousQuestion()"> < Previous</div>
+          <div class="navigation-button__divider"></div>
+          <div class="col navigation-button" ng-click="nextQuestion()">Next > </div>
+        </div>
+
+      </div>
+
+    <div class="reset">
+      <a class="reset-link" href="#" ng-click="resetQuestions()" ng-if="current != 1"> Reset Questions</a>
+    </div>
+
+  </div>
+</div>
